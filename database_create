@@ -1,0 +1,14 @@
+Project B
+- connect 'jdbc:derby://localhost:1527/PaymentsDb;create=true';
+ბაზასთან  დაკავშირება - connect 'jdbc:derby://localhost:1527/PaymentsDb;
+- CREATE TABLE Payments(
+    Payment_id INTEGER NOT NULL PRIMARY KEY,
+    User_id INTEGER,
+    Amount DECIMAL(10, 2),
+    Transaction_id BIGINT,
+    Request_date TIMESTAMP,
+    Response_date TIMESTAMP,
+    Code SMALLINT,
+    Status SMALLINT,
+    CONSTRAINT Sta_CHK CHECK (Status IN (0, 1, 2))
+);
