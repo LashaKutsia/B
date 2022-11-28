@@ -1,0 +1,25 @@
+<Context>
+    <Resource
+            name="jdbc/userDS"
+            auth="Container"
+            factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+            type="javax.sql.DataSource"
+            driverClassName="org.apache.derby.jdbc.ClientDriver"
+            url="jdbc:derby://localhost:1527/UsersDb"
+            username="APP"
+            password="123"
+            defaultQueryTimeout="150"
+            maxTotal="30"
+            maxIdle="10"
+            maxWaitMillis="1000"
+            validationQuery="VALUES(1)"
+            validationQueryTimeout="5"
+            testWhileIdle="true"
+            timeBetweenEvictionRunsMillis="5000"
+            accessToUnderlyingConnectionAllowed="true"
+            removeAbandonedOnMaintenance="true"
+            removeAbandonedOnBorrow="true"
+            removeAbandonedTimeout="180"
+            logAbandoned="true"
+    />
+</Context>
